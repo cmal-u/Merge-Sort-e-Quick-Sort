@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1568856703 source:c:\users\maluc\desktop\merge-sort-e-quick-sort\merge sort\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1568856732 source:c:\users\maluc\desktop\merge-sort-e-quick-sort\merge sort\lib.c
+	<stdio.h>
+
