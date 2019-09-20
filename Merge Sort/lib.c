@@ -4,7 +4,7 @@ void MergeSort(int V[], int inicio, int fim)
 {
     int m;
     if(inicio < fim) {
-        m = inicio + (fim - inicio)/2;
+        m = (inicio + fim)/2;
         //printf("\n>>>>>%d\n", m);
         MergeSort(V, inicio, m);
         MergeSort(V, m+1, fim);
