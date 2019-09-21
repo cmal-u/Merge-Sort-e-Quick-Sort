@@ -1,6 +1,20 @@
 #include <stdio.h>
 #include "lib.h"
 
+<<<<<<< HEAD
+=======
+void MergeSort(int V[], int inicio, int fim)
+{
+    int m;
+    if(inicio < fim) {
+        m = (inicio + fim)/2;
+        //printf("\n>>>>>%d\n", m);
+        MergeSort(V, inicio, m);
+        MergeSort(V, m+1, fim);
+        Merge(V, inicio, m, fim);
+    }
+}
+>>>>>>> 16f910d59f3dd4454fe4aad30dd938069a13a447
 
 void Merge(int V[], int e, int m, int d)
 {
