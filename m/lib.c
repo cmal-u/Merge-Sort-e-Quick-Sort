@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "lib.h"
 
-
 void Merge(int V[], int e, int m, int d)
 {
     int i, j, k;                        // contadores
@@ -53,41 +52,5 @@ void MergeSort(int V[], int e, int d)
         MergeSort(V, e, m);
         MergeSort(V, m+1, d);
         Merge(V, e, m, d);
-    }
-}
-
-void ordenarArquivo(FILE *arq)
-{
-    int cont = 0, tamanho = 0;
-    char linha[100], *primeiraLinha;
-
-    fgets(linha, sizeof linha, arq);
-    primeiraLinha = strtok(linha, " ");
-
-    tamanho = atoi(primeiraLinha);
-    int vetor[tamanho];
-
-    while(!feof(arq)) {
-        fscanf(arq, "%d", &vetor[cont++]);
-    }
-
-    fclose(arq);
-    MergeSort(vetor, 0, tamanho-1);
-
-    criarNovoArq(vetor, tamanho);
-
-
-}
-
-void criarNovoArq(int v[], int tam)
-{
-    FILE *arquivo = fopen("ArquivoOrdenado.txt", "w+");
-
-    if (arquivo != NULL) {
-        for(int i = 0; i < tam; i++) {
-            fprintf(arquivo,"%d\n", v[i]);
-        }
-        fclose(arquivo);
-        printf("Novo arquivo ordenado foi criado.\n\n");
     }
 }

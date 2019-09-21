@@ -3,17 +3,16 @@
 
 int main()
 {
-    int v[10] = {44, 47, 2, 6, -5, 1, 0, 12, 25, 37};
+    FILE *arquivo;
 
-    for(int i = 0; i < 10; i++)
-        printf(">>>%d\n", v[i]);
+    arquivo = fopen("instancias-num/num.1000.4.in", "r");
 
-    printf("\n");
+    if(arquivo == NULL) {
+        printf("Nao foi possivel abrir o arquivo\n");
+        return -1;
+    }
 
-    //MergeSort(v, 0, 10);
-
-    for(int i = 0; i < 10; i++)
-        printf(">>>%d\n", v[i]);
+    ordenarArquivo(arquivo);
 
 
     return 0;
